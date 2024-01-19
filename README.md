@@ -16,7 +16,15 @@ All required dependencies are listed in the `pom.xml` file and include Selenium 
 ## Running Tests
 
 ### Test Execution
-Tests are run using the TestNG framework, with scenarios defined in Cucumber feature files. The `TestRunner` class in `src/test/java/org/webstaurantstore/runner` directory is used to initiate the tests.
+Tests are executed in parallel using the TestNG framework, enhancing the speed and efficiency of the test runs. The scenarios for the tests are defined in Cucumber feature files, and the `TestRunner` class located in the `src/test/java/org/webstaurantstore/runner` directory is configured to trigger these tests.
+
+For instance, the feature file `work-table-search.feature` in the `src/test/resources/features` directory contains scenarios that can be run directly. This file includes scenarios such as:
+
+- Verifying that multiple pages of search results are displayed when searching for "stainless work table".
+- Ensuring that every product in the search results contains the word "Table".
+- Adding the last item from the search results to the cart and ensuring the cart can be emptied.
+
+These scenarios are annotated with Cucumber tags like `@VerifySearchResults` and `@EmptyCartAfterAddTable`, allowing for selective test execution.
 
 ### Feature Files
 Scenarios are described in the feature files, like `work-table-search.feature` in the `src/test/resources/features` directory. These feature files outline the steps for various test cases, such as searching for products and verifying cart functionalities.
