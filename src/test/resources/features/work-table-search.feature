@@ -1,4 +1,3 @@
-@WorkTableSearch
 Feature: Search and Verify Stainless Work Tables
 
   @VerifySearchResults
