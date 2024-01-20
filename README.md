@@ -30,6 +30,9 @@ For instance, the feature file `work-table-search.feature` in the `src/test/reso
 
 These scenarios are annotated with Cucumber tags like `@VerifySearchResults` and `@EmptyCartAfterAddTable`, allowing for selective test execution.
 
+### Step Definitions for BDD Tests
+The project uses BDD with Cucumber for better collaboration and clear communication. The step definitions in `src/test/java/org/webstaurantstore/stepdefinitions` convert Gherkin steps into Java code, ensuring tests align with business requirements.
+
 ## Project Structure
 
 ### Base Classes
