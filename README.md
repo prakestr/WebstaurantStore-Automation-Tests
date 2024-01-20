@@ -2,10 +2,14 @@
 
 This Selenium-Java project is designed for automated testing of the WebstaurantStore website. It encompasses a variety of tests to ensure the functionality of the website, focusing on product search and cart management.
 
+## Prerequisites
+
+- Java SDK 20
+
 ## Project Setup and Installation
 
 ### Environment Setup
-Ensure Java and Maven are installed on your system.
+Ensure Java SDK 20 is installed on your system. This project uses Java SDK 20 for its features and improvements.
 
 ### Driver Configuration
 The `WebDriverManager` class handles the driver setup for Chrome, Firefox, and Edge browsers based on the browser's configuration.
@@ -26,9 +30,6 @@ For instance, the feature file `work-table-search.feature` in the `src/test/reso
 
 These scenarios are annotated with Cucumber tags like `@VerifySearchResults` and `@EmptyCartAfterAddTable`, allowing for selective test execution.
 
-### Feature Files
-Scenarios are described in the feature files, like `work-table-search.feature` in the `src/test/resources/features` directory. These feature files outline the steps for various test cases, such as searching for products and verifying cart functionalities.
-
 ## Project Structure
 
 ### Base Classes
@@ -44,6 +45,3 @@ The `ConfigLoader` class is used for loading configurations, and logging is conf
 
 ### Logging
 Log4j2 is used for logging, with configurations set in `log4j2.xml`.
-
-### Reporting
-Integration with Allure is set up for generating detailed test reports.
