@@ -1,4 +1,4 @@
-# WebstaurantStore Automation Tests
+# WebstaurantStore Automation Task
 
 This Selenium-Java project is designed for automated testing of the WebstaurantStore website. It encompasses a variety of tests to ensure the functionality of the website, focusing on product search and cart management.
 
