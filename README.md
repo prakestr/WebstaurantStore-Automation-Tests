@@ -41,7 +41,5 @@ Located in `src/test/java/org/webstaurantstore/pageobjects`, these classes repre
 ### Utilities and Configurations
 The `ConfigLoader` class is used for loading configurations, and logging is configured via `log4j2.xml` in the `src/main/resources` directory.
 
-## Logging and Reports
-
 ### Logging
 Log4j2 is used for logging, with configurations set in `log4j2.xml`.
