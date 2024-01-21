@@ -59,15 +59,18 @@ public class ProductListPage extends BasePage {
         driver.get(getHomeUrl() + "search/stainless-work-table.html?page=" + totalPages);
         logger.info("Navigating to the last page number: " + totalPages);
 
-        // Wait for the last Add to Cart button to be visible and clickable
-        By lastAddToCartButtonLocator = By.cssSelector("input[data-testid='itemAddCart']");
-        WebElement lastAddToCartButton = waitForElementToBeClickable(lastAddToCartButtonLocator);
+        // Find all Add to Cart buttons on the page
+        List<WebElement> addToCartButtons = driver.findElements(By.cssSelector("input[data-testid='itemAddCart']"));
+
+        // Select the last Add to Cart button
+        WebElement lastAddToCartButton = addToCartButtons.get(addToCartButtons.size() - 1);
+
+        // Wait until the last Add to Cart button is clickable
+        waitForElementToBeClickable(lastAddToCartButton);
 
         // Click the last Add to Cart button
         lastAddToCartButton.click();
 
-        // Wait for the item to be added to the cart
-        waitForVisibilityOfElement(By.cssSelector("div[data-role='notification']"));
     }
 
     public boolean verifyTextOnAllPages(String textToVerify) {
